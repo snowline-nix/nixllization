@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "nixlattice": {
+      "inputs": {
+        "nixlib": "nixlib"
+      },
+      "locked": {
+        "lastModified": 1789237781,
+        "narHash": "sha256-H1zLodtH6k38ZvgzUmG7JQbtblAcNsGQQxw75eQSrx8=",
+        "owner": "snowline-nix",
+        "repo": "nixlattice",
+        "rev": "29e58667a6b9115ae4e8fba944a1a34147ab91e4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "snowline-nix",
+        "repo": "nixlattice",
+        "type": "github"
+      }
+    },
+    "nixlib": {
+      "locked": {
+        "lastModified": 1789233255,
+        "narHash": "sha256-ki+20AOe0J1RHFoWW5lMZ4rbvX+KiTklC2RxYsrFFIw=",
+        "ref": "v0.3.0-a1",
+        "rev": "7dcd0fa1e79346cc82d2f4422a4cacc20381749f",
+        "revCount": 131,
+        "type": "git",
+        "url": "https://github.com/zudww/nixlib-general"
+      },
+      "original": {
+        "ref": "v0.3.0-a1",
+        "type": "git",
+        "url": "https://github.com/zudww/nixlib-general"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixlattice": "nixlattice"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
