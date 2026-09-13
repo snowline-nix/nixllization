@@ -1,5 +1,5 @@
-{ nixlattice, ... }:
-let lib = nixlattice.lib; in
+{ nixlib-general, ... }:
+let lib = nixlib-general.lib; in
 {
   lib =
     {
