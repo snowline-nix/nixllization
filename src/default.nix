@@ -10,6 +10,7 @@
     inherit mixins process steps;
 
     inherit (mixins)
+      applyMixins
       insertAfterFirstId
       insertAfterId
       insertAfterIndex

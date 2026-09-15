@@ -1,4 +1,5 @@
 {
+  accForEachElem,
   indexOfMatch,
   indicesOfMatch,
   insertAfterElemAt,
@@ -13,6 +14,10 @@
   ...
 }:
 {
+  applyMixins = mixins: _:
+    accForEachElem mixins _
+    (transforms: mixin: mixin transforms);
+
   insertAfterFirstId = stepBefore: steps:
     insertAfterElemAt (indexOfMatch steps (step: step.identifier == stepBefore)) steps;
 
