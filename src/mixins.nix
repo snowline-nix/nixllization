@@ -18,27 +18,33 @@
     accForEachElem mixins _
     (transforms: mixin: mixin transforms);
 
-  insertAfterFirstId = stepBefore: steps:
-    insertAfterElemAt (indexOfMatch steps (step: step.identifier == stepBefore)) steps;
+  insertAfterFirstId = stepBefore: newStep: steps:
+    insertAfterElemAt (indexOfMatch steps (step: step.identifier == stepBefore)) steps newStep;
 
-  insertAfterId = stepBefore: steps:
-    insertAfterElemsAt (indicesOfMatch steps (step: step.identifier == stepBefore)) steps;
+  insertAfterId = stepBefore: newStep: steps:
+    insertAfterElemsAt (indicesOfMatch steps (step: step.identifier == stepBefore)) steps newStep;
 
-  insertAfterIndex = insertAfterElemAt;
+  insertAfterIndex = stepBefore: newStep: steps:
+    insertAfterElemAt stepBefore steps newStep;
 
-  insertBeforeFirstId = stepAfter: steps:
-    insertBeforeElemAt (indexOfMatch steps (step: step.identifier == stepAfter)) steps;
+  insertBeforeFirstId = stepAfter: newStep: steps:
+    insertBeforeElemAt (indexOfMatch steps (step: step.identifier == stepAfter)) steps newStep;
 
-  insertBeforeId = stepAfter: steps:
-    insertBeforeElemsAt (indicesOfMatch steps (step: step.identifier == stepAfter)) steps;
+  insertBeforeId = stepAfter: newStep: steps:
+    insertBeforeElemsAt (indicesOfMatch steps (step: step.identifier == stepAfter)) steps newStep;
 
-  insertBeforeIndex = insertBeforeElemAt;
+  insertBeforeIndex = stepAfter: newStep: steps:
+    insertBeforeElemAt stepAfter steps newStep;
 
-  replaceAtIndex = replaceElemAt;
+  replaceAtIndex = stepAt: newStep: steps:
+    replaceElemAt stepAt steps newStep;
 
-  replaceId = id: steps: step: replaceElemsAt (indicesOfMatch steps (step: step.identifier == id)) steps step;
+  replaceId = stepAt: newStep: steps:
+    replaceElemsAt (indicesOfMatch steps (step: step.identifier == stepAt)) steps newStep;
 
-  removeAtIndex = removeElemAt;
+  removeAtIndex = stepAt: newStep: steps:
+    removeElemAt stepAt steps newStep;
 
-  removeId = id: steps: removeElemsAt (indicesOfMatch steps (step: step.identifier == id));
+  removeId = stepAt: newStep: steps:
+    removeElemsAt (indicesOfMatch steps (step: step.identifier == stepAt)) steps newStep;
 }
